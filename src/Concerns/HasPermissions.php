@@ -104,7 +104,7 @@ trait HasPermissions
      * @param  int|string|Model  $permission
      * @return bool
      */
-    public function hasPermission($permission, string $guardName = null): bool
+    public function hasPermission($permission, ?string $guardName = null): bool
     {
         /** @var Permission $permissionClass */
         $permissionClass = $this->getPermissionClass();
@@ -332,7 +332,7 @@ trait HasPermissions
      * @param string|null $guardName
      * @return bool
      */
-    public function hasDirectPermission($permission, string $guardName = null): bool
+    public function hasDirectPermission($permission, ?string $guardName = null): bool
     {
         $permissionClass = $this->getPermissionClass();
 

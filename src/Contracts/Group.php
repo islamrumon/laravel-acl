@@ -26,7 +26,7 @@ interface Group
      * @param string|null $guardName
      * @return static
      */
-    public static function findByName(string $name, string $guardName = null): self;
+    public static function findByName(string $name, ?string $guardName = null): self;
 
     /**
      * Find a group by its id and optionally guard name.
@@ -35,7 +35,7 @@ interface Group
      * @param string|null $guardName
      * @return static
      */
-    public static function findById(int $id, string $guardName = null): self;
+    public static function findById(int $id, ?string $guardName = null): self;
 
     /**
      * Find or create a group by its name and optionally guard name.

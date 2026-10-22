@@ -55,7 +55,7 @@ class CreateGroup extends Command
         return Command::SUCCESS;
     }
 
-    protected function makePermissions(string $permissions = null): Collection
+    protected function makePermissions(?string $permissions = null): Collection
     {
         if (empty($permissions)) {
             return collect();

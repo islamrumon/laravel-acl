@@ -196,7 +196,7 @@ trait HasGroups
         $this->assignGroup($groups);
     }
 
-    public function hasGroup($groups, string $guard = null): bool
+    public function hasGroup($groups, ?string $guard = null): bool
     {
         if (is_string($groups) && strpos($groups, '|') !== false) {
             $groups = $this->convertPipeToArray($groups);
@@ -253,7 +253,7 @@ trait HasGroups
      * @param string|null $guard
      * @return bool
      */
-    public function hasAllGroups($groups, string $guard = null): bool
+    public function hasAllGroups($groups, ?string $guard = null): bool
     {
         if (is_string($groups) && false !== strpos($groups, '|')) {
             $groups = $this->convertPipeToArray($groups);
@@ -287,7 +287,7 @@ trait HasGroups
      * @param string|null $guard
      * @return bool
      */
-    public function hasExactlyGroups($groups, string $guard = null): bool
+    public function hasExactlyGroups($groups, ?string $guard = null): bool
     {
         if (is_string($groups) && false !== strpos($groups, '|')) {
             $groups = $this->convertPipeToArray($groups);

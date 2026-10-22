@@ -7,7 +7,7 @@ use Junges\ACL\Exceptions\UnauthorizedException;
 
 class GroupMiddleware
 {
-    public function handle($request, Closure $next, $groups, string $guard = null)
+    public function handle($request, Closure $next, $groups, ?string $guard = null)
     {
         $authGuard = app('auth')->guard($guard);
 
